@@ -18,7 +18,10 @@
     @else
         <li class="nav-item">
             <a class="nav-link" href="{{route('entries.create')}}">New Entry</a>
+        </li>
 
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('home')}}">My Entries</a>
         </li>
     
         <li class="nav-item dropdown">
