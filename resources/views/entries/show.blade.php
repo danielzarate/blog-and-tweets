@@ -18,6 +18,7 @@
 
                     @if ($entry->user_id===auth()->user()->id)
                         <hr>
+
                         <a href="{{url('entries/'.$entry->id."/edit")}}" class="btn btn-primary">Edit Entry</a>
                     @endif
                 </div>

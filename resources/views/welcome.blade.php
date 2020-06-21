@@ -12,7 +12,7 @@
                         <p>{{$entry->content}}</p>
                     </div>
                     <div class="card-footer">
-                        Author:<a href="{{url('users/'.$entry->id)}}">{{ $entry->user->name }}</a>
+                        Author:<a href="{{url('users/'.$entry->user->id)}}">{{ $entry->user->name }}</a>
                         
                     </div>
                 </div>

@@ -3,9 +3,20 @@
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
+        
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-header">Twits</div>
+
+                <div class="card-body">
+                    API Twitter
+                </div>
+            </div>
+        </div>
+
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{$entry->title}}</div>
+                <div class="card-header">{{$user->name}}</div>
 
                 <div class="card-body">
                     @if (session('status'))
@@ -14,12 +25,17 @@
                         </div>
                         
                     @endif
-                    {{$entry->content}}
+                    <p>Entries:</p>
+                    <ul>
+                        @foreach ($entries as $entry)
+                            <li>
+                                <a href="{{$entry->getUrl()}}">{{$entry->title}}</a>
+                            </li>    
+                        @endforeach
+                    </ul>
+                    
 
-                    @if ($entry->user_id===auth()->user()->id)
-                        <hr>
-                        <a href="{{url('entries/'.$entry->id."/edit")}}" class="btn btn-primary">Edit Entry</a>
-                    @endif
+
                 </div>
             </div>
         </div>

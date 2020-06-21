@@ -18,6 +18,7 @@ class CreateEntriesTable extends Migration
 
             $table->string('title');
             $table->text('content');
+            $table->text('slug');
 
             //Author
             $table->unsignedBigInteger('user_id');
